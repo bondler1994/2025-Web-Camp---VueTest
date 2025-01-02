@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Vue3 CDN -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <!-- {{}} 裡面放得東西是透過vue連接 -->
+            <!-- 有點像是電話得概念，串街過去 -->
+            <h1>{{ product }}</h1>
+            <p>I love {{ product }}</p>
+        </div>
+
+        <!-- import App -->
+        <script src="./creating_the_vue_app.js"></script>
+        <script>
+            const mountedApp = app.mount("#app");
+        </script>
+    </body>
+</html>
