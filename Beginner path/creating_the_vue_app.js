@@ -3,7 +3,10 @@
 const app = Vue.createApp({
     data() {
         return {
-            product: "fff",
+            product: "socks",
+            image: "../Intro-to-Vue-3/assets/images/socks_green.jpg",
+            // inStock: false,
+            inventory: 0,
         };
     },
 });
