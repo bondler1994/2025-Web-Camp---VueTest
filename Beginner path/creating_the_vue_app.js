@@ -9,8 +9,9 @@ const app = Vue.createApp({
             inventory: 0,
             details: ["50% happy", "30% jeremy", "20% watson"],
             variants: [
-                { id: 2234, color: "green" },
                 { id: 2235, color: "blue" },
+                { id: 2234, color: "blue" },
+                { id: 1, color: "black" },
             ],
         };
     },
