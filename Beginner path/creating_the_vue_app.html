@@ -18,6 +18,7 @@
                 <div class="product-container">
                     <div class="product-image">
                         <img :src="image" />
+                        <a :href="youtube">sza</a>
                     </div>
                     <!-- {{}} 裡面放得東西是透過vue連接 -->
                     <!-- 有點像是電話得概念，串街過去 -->
@@ -25,9 +26,10 @@
                         <!-- <h1>{{ brand + " " + product }}</h1> -->
                         <h1>{{ title }}</h1>
 
-                        <p v-if="inStock">In Stock</p>
                         <!-- <p v-else-if="inventory <= 10 && inventory > 0">Almost out of stock</p> -->
+                        <p v-if="inStock">In Stock</p>
                         <p v-else>Out of Stock</p>
+                        <p v-show="testShow">abc</p>
                         <ul>
                             <li v-for="detail in details">{{ detail }}</li>
                         </ul>
@@ -46,7 +48,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> 
 
         <!-- import App -->
         <script src="./creating_the_vue_app.js"></script>

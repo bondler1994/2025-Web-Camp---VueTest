@@ -3,16 +3,18 @@
 const app = Vue.createApp({
     data() {
         return {
+            youtube: "https://www.youtube.com/watch?v=hWjwNgiLMgA&list=RDhWjwNgiLMgA&start_radio=1",
             cart: 0,
+            testShow: false,
             product: "socks",
             brand: "Vue Mastery",
             selectedVariant: 0,
-            inStock: false,
+            inStock: true,
             inventory: 0,
             details: ["50% happy", "30% jeremy", "20% watson"],
             variants: [
                 { id: 2234, color: "green", image: "../Intro-to-Vue-3/assets/images/socks_green.jpg", quantity: 50 },
-                { id: 2235, color: "blue", image: "../Intro-to-Vue-3/assets/images/socks_blue.jpg", quantity: 50 },
+                { id: 2235, color: "blue", image: "../Intro-to-Vue-3/assets/images/socks_blue.jpg", quantity: 0 },
             ],
         };
     },
