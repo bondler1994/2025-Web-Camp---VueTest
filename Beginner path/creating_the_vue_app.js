@@ -6,7 +6,7 @@ const app = Vue.createApp({
             cart: 0,
             product: "socks",
             image: "../Intro-to-Vue-3/assets/images/socks_green.jpg",
-            // inStock: false,
+            inStock: false,
             inventory: 0,
             details: ["50% happy", "30% jeremy", "20% watson"],
             variants: [
