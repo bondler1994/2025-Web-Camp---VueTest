@@ -6,6 +6,7 @@ const app = Vue.createApp({
             //test SZA youtube
             // youtube: "https://www.youtube.com/watch?v=hWjwNgiLMgA&list=RDhWjwNgiLMgA&start_radio=1",
             cart: 0,
+            premium: true,
         };
     },
     methods: {},

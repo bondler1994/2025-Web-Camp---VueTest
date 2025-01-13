@@ -1,4 +1,10 @@
 app.component("product-display", {
+    props: {
+        primium: {
+            type: Boolean,
+            required: false,
+        },
+    },
     template:
         /*html*/
         `
@@ -18,6 +24,7 @@ app.component("product-display", {
                         <!-- <p v-else-if="inventory <= 10 && inventory > 0">Almost out of stock</p> -->
                         <p v-if="inStock">In Stock</p>
                         <p v-else>Out of Stock</p>
+                        <p>Shipping:{{shipping}}</p>
                         <p v-show="testShow">abc</p>
                         <ul>
                             <!-- <li v-for="tryIt in tryIts">{{tryIt}}</li> -->
@@ -83,6 +90,13 @@ app.component("product-display", {
         },
         inStock() {
             return this.variants[this.selectedVariant].quantity;
+        },
+        shipping() {
+            if (this.premium) {
+                return "Free";
+            } else {
+                return 2.99;
+            }
         },
         // h2test() {
         //     return this.h2test1 + " " + this.h2test2;
