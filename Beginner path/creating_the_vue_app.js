@@ -43,9 +43,8 @@ const app = Vue.createApp({
         inStock() {
             return this.variants[this.selectedVariant].quantity;
         },
-
         h2test() {
-            return this.h2test1 + " " + h2test2;
+            return this.h2test1 + " " + this.h2test2;
         },
     },
 });
