@@ -18,7 +18,7 @@
                 <div class="product-container">
                     <div class="product-image">
                         <img :src="image" />
-                        <a :href="youtube">sza</a>
+                        <!-- <a :href="youtube">sza</a> -->
                     </div>
                     <!-- {{}} 裡面放得東西是透過vue連接 -->
                     <!-- 有點像是電話得概念，串街過去 -->
@@ -31,6 +31,7 @@
                         <p v-else>Out of Stock</p>
                         <p v-show="testShow">abc</p>
                         <ul>
+                            <!-- <li v-for="tryIt in tryIts">{{tryIt}}</li> -->
                             <li v-for="detail in details">{{ detail }}</li>
                         </ul>
                         <div
@@ -38,17 +39,20 @@
                             :key="variant.id"
                             @mouseover="updateVariant(index)"
                             class="color-circle"
-                            :style="{backgroundColor:variant.color }"
+                            :style="{backgroundColor:variant.color}"
                         >
+                            <!-- 可選擇性 若寫css就會是background-color -->
                             {{ }}
                         </div>
+                        <!-- 設計cart -->
                         <!-- <button class="button" v-on:click="cart += 1">add to Cart</button> -->
                         <!-- <button class="button" v-on:click="addToCart">add to Cart</button> -->
+                        <!-- :class裡的是指定css style去偵測js狀態來決定是否顯示 -->
                         <button class="button" :class="{disabledButton: !inStock}" :disabled="!inStock" @click="addToCart">add to Cart</button>
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>
 
         <!-- import App -->
         <script src="./creating_the_vue_app.js"></script>
