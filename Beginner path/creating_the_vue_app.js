@@ -7,8 +7,10 @@ const app = Vue.createApp({
             // youtube: "https://www.youtube.com/watch?v=hWjwNgiLMgA&list=RDhWjwNgiLMgA&start_radio=1",
             cart: 0,
             testShow: false,
-            product: "socks",
             brand: "Vue Mastery",
+            product: "socks",
+            h2test1: "you are",
+            h2test2: "fucking shit hole",
             selectedVariant: 0,
             inventory: 0,
             details: ["50% happy", "30% jeremy", "20% watson"],
@@ -40,6 +42,10 @@ const app = Vue.createApp({
         },
         inStock() {
             return this.variants[this.selectedVariant].quantity;
+        },
+
+        h2test() {
+            return this.h2test1 + " " + h2test2;
         },
     },
 });
