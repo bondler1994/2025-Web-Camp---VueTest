@@ -13,50 +13,16 @@
             <div class="nav-bar"></div>
 
             <div class="cart">Cart({{ cart }})</div>
-
-            <div class="product-display">
-                <div class="product-container">
-                    <div class="product-image">
-                        <img :src="image" />
-                        <!-- <a :href="youtube">sza</a> -->
-                    </div>
-                    <!-- {{}} 裡面放得東西是透過vue連接 -->
-                    <!-- 有點像是電話得概念，串街過去 -->
-                    <div class="product-intro">
-                        <!-- <h1>{{ brand + " " + product }}</h1> -->
-                        <h1>{{ title }}</h1>
-                        <p>{{ h2test }}</p>
-
-                        <!-- <p v-else-if="inventory <= 10 && inventory > 0">Almost out of stock</p> -->
-                        <p v-if="inStock">In Stock</p>
-                        <p v-else>Out of Stock</p>
-                        <p v-show="testShow">abc</p>
-                        <ul>
-                            <!-- <li v-for="tryIt in tryIts">{{tryIt}}</li> -->
-                            <li v-for="detail in details">{{ detail }}</li>
-                        </ul>
-                        <div
-                            v-for="(variant, index) in variants"
-                            :key="variant.id"
-                            @mouseover="updateVariant(index)"
-                            class="color-circle"
-                            :style="{backgroundColor:variant.color}"
-                        >
-                            <!-- 可選擇性 若寫css就會是background-color -->
-                            {{ }}
-                        </div>
-                        <!-- 設計cart -->
-                        <!-- <button class="button" v-on:click="cart += 1">add to Cart</button> -->
-                        <!-- <button class="button" v-on:click="addToCart">add to Cart</button> -->
-                        <!-- :class裡的是指定css style去偵測js狀態來決定是否顯示 -->
-                        <button class="button" :class="{disabledButton: !inStock}" :disabled="!inStock" @click="addToCart">add to Cart</button>
-                    </div>
-                </div>
-            </div>
+            <product-display></product-display>
         </div>
 
         <!-- import App -->
         <script src="./creating_the_vue_app.js"></script>
+        <!-- import App -->
+        <script src="../components/ProductDisplay.js"></script>
+        <script src="../components/ProductDisplay.js"></script>
+        <script src="../components/ProductDisplay.js"></script>
+
         <script>
             const mountedApp = app.mount("#app");
         </script>
