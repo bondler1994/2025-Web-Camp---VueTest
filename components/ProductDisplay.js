@@ -1,6 +1,6 @@
 app.component("product-display", {
     props: {
-        primium: {
+        premium: {
             type: Boolean,
             required: false,
         },
@@ -73,7 +73,7 @@ app.component("product-display", {
     },
     methods: {
         addToCart() {
-            this.cart += 1;
+            this.$emit("add-to-cart", this.variants[this.selectedVariant].id);
         },
         updateVariant(index) {
             this.selectedVariant = index;

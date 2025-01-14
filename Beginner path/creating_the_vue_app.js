@@ -5,10 +5,14 @@ const app = Vue.createApp({
         return {
             //test SZA youtube
             // youtube: "https://www.youtube.com/watch?v=hWjwNgiLMgA&list=RDhWjwNgiLMgA&start_radio=1",
-            cart: 0,
+            cart: [],
             premium: true,
         };
     },
-    methods: {},
+    methods: {
+        updateCart(id) {
+            this.cart.push(id);
+        },
+    },
     //用來計算用，相加相減
 });
