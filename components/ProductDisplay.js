@@ -47,6 +47,7 @@ app.component("product-display", {
                         <button class="button" :class="{disabledButton: !inStock}" :disabled="!inStock" @click="addToCart">add to Cart</button>
                     </div>
                 </div>
+                <review-form></review-form>
             </div>
 
         `,
