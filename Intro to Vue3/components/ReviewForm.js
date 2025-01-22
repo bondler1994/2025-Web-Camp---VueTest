@@ -29,11 +29,11 @@ app.component("review-form", {
         };
     },
     methods: {
-        // onSubmit() {
-        //     if (this.name === "" || this.review === "" || this.rating === "") {
-        //         alert("Review is incomplete. please fill out every field");
-        //         return
-        //     }
+        onSubmit() {
+            if (this.name === "" || this.review === "" || this.rating === "") {
+                alert("Review is incomplete. please fill out every field.");
+                return;
+            }
 
             let productReview = {
                 name: this.name,

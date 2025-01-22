@@ -47,7 +47,7 @@ app.component("product-display", {
                         <button class="button" :class="{disabledButton: !inStock}" :disabled="!inStock" @click="addToCart">add to Cart</button>
                     </div>
                 </div>
-                <review-list v-if="reviews.length" :review="reviews"></review-list>
+                <review-list v-if="reviews.length" :reviews="reviews"></review-list>
                 <review-form  @review-submitted="addReview"></review-form>
             </div>
 
@@ -71,7 +71,7 @@ app.component("product-display", {
                 { id: 2235, color: "blue", image: "../Intro-to-Vue-3/assets/images/socks_blue.jpg", quantity: 0 },
                 // image: "../Intro-to-Vue-3/assets/images/socks_blue.jpg", quantity: 0
             ],
-            review: [],
+            reviews: [],
         };
     },
     methods: {
@@ -82,7 +82,7 @@ app.component("product-display", {
             this.selectedVariant = index;
         },
         addReview(review) {
-            this.review.push(review);
+            this.reviews.push(review);
         },
     },
     //用來計算用，相加相減
