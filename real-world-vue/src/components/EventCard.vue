@@ -8,11 +8,8 @@
 <script>
 export default {
   name: "EventCard",
-  // props: {
-  //   msg: String,
-  // },
-  data() {
-    return {};
+  props: {
+    event: Object,
   },
 };
 </script>
@@ -23,6 +20,10 @@ export default {
   width: 250px;
   cursor: pointer;
   border: 1px solid black;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+}
+.event-card:hover {
+  transform: scale(1.01);
+  box-shadow: 0 3px 12px 0 rgba(0, 0, 0, 0.2);
 }
 </style>
