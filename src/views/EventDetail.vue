@@ -7,16 +7,18 @@
 </template>
 
 <script>
+import EventService from '@/services/EventService.js'
 export default {
   data() {
     return {
       event: null
+      id:123
     }
   },
   created() {
-    EventService.getEvent()
+    EventService.getEvent(this.id)
       .then(response => {
-        this.events = response.data
+        this.event = response.data
       })
       .catch(error => {
         console.log(error)
