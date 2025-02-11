@@ -8,7 +8,7 @@
 <script>
 // @ is an alias to /src
 import EventCard from '@/components/EventCard.vue'
-import axios from 'axios'
+import EventService from '@/services/EventService.js'
 
 export default {
   name: 'Home',
@@ -22,10 +22,7 @@ export default {
   },
   //他可以去查找伺服器資料
   created() {
-    axios
-      .get(
-        'https://my-json-server.typicode.com/Code-Pop/Real-World-Vue-3-New-Syntax/events'
-      )
+    EventService.getEvents()
       .then(response => {
         this.events = response.data
       })
