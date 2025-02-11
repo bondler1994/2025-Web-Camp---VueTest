@@ -1,6 +1,7 @@
 <template>
   <div class="events">
-    <h1>this shit</h1>
+    <h1>card down below</h1>
+    <!-- <pre>{{ events }}</pre> -->
     <EventCard v-for="event in events" :key="event.id" :event="event" />
   </div>
 </template>
